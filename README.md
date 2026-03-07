@@ -32,13 +32,13 @@ https://github.com/owner/repo
 **Пример:**
 
 ```
-Enter GitHub repo (owner/repo or full URL): torvalds/linux
-Name: linux
-Description: Linux kernel source tree
-Stars: 190000
-Forks: 57000
-Created at: April 8, 2011
-Link: https://github.com/torvalds/linux
+Enter GitHub repo (owner/repo or full URL): PySATL/pysatl-core
+Name: pysatl-core
+Description: PySATL Core Library for computation over probablity distribution, and parametric families
+Stars: 2
+Forks: 2
+Created at: November 7, 2024
+Link: https://github.com/PySATL/pysatl-core
 ```
 
 ### Сборка
