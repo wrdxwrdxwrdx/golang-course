@@ -60,6 +60,7 @@ func parseInput(input string) (owner, repo string, ok bool) {
 	input = strings.TrimSpace(input)
 	input = strings.TrimPrefix(input, "https://")
 	input = strings.TrimPrefix(input, "http://")
+	input = strings.TrimPrefix(input, "github.com/")
 	input = strings.TrimSuffix(input, "/")
 
 	parts := strings.SplitN(input, "/", 2)
