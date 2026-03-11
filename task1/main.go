@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"os"
 	"strings"
 	"time"
 )
@@ -71,9 +72,13 @@ func parseInput(input string) (owner, repo string, ok bool) {
 }
 
 func main() {
-	fmt.Print("Enter GitHub repo (owner/repo or full URL): ")
-	var input string
-	fmt.Scan(&input)
+	if len(os.Args) < 2 {
+		fmt.Println("Usage: go run main.go <github-url-or-owner/repo>")
+		fmt.Println("Example: go run main.go golang/go")
+		os.Exit(1)
+	}
+
+	input := os.Args[1]
 
 	owner, repoName, ok := parseInput(input)
 	if !ok {
@@ -86,5 +91,5 @@ func main() {
 		fmt.Printf("Error getting repo: %v\n", err)
 		return
 	}
-	fmt.Printf("%s", repo)
+	fmt.Println(repo)
 }
